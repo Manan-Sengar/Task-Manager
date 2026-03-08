@@ -1,0 +1,237 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Page Layout */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+
+/* App Container */
+
+.app {
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(8px);
+    padding: 25px;
+    width: 420px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+/* Title */
+
+.title {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #333;
+}
+
+
+/* Input Section */
+
+.input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+li input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+#addTaskButton {
+    padding: 10px 16px;
+    border: none;
+    background: #4CAF50;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#addTaskButton:hover {
+    background: #43a047;
+}
+
+
+/* Filters */
+
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.filters button {
+    padding: 6px 12px;
+    border: none;
+    background: #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: #d5d5d5;
+}
+
+
+/* Action Buttons (Clear buttons) */
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+#clearCompleted {
+    padding: 7px 12px;
+    border: none;
+    background: #f44336;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#clearCompleted:hover {
+    background: #e53935;
+}
+
+#clearAll {
+    padding: 7px 12px;
+    border: none;
+    background: #555;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#clearAll:hover {
+    background: #333;
+}
+
+
+/* Task Counter */
+
+#taskCounter {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Task List */
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+li span {
+    flex: 1;
+}
+
+li:hover {
+    background: #f7f7f7;
+}
+
+
+/* Buttons inside task */
+
+li button {
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+li button:nth-child(3) {
+    background: #2196F3;
+    color: white;
+}
+
+li button:nth-child(3):hover {
+    background: #1e88e5;
+}
+
+li button:nth-child(4) {
+    background: #f44336;
+    color: white;
+}
+
+li button:nth-child(4):hover {
+    background: #e53935;
+}
+
+
+/* Completed task */
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+
+/* Button Hover Animation */
+
+button {
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+
+/* Card Animation */
+
+.app {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
